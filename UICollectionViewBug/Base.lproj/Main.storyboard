@@ -15,9 +15,54 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K5T-Cw-2mq">
+                                <rect key="frame" x="170" y="277" width="260" height="46"/>
+                                <subviews>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jdQ-KF-s1D">
+                                        <rect key="frame" x="8" y="8" width="51" height="31"/>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Translucent Navigation Bar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EYa-Ur-ddF">
+                                        <rect key="frame" x="65" y="15" width="173.5" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerY" secondItem="EYa-Ur-ddF" secondAttribute="centerY" id="99s-SG-c0s"/>
+                                    <constraint firstAttribute="centerY" secondItem="jdQ-KF-s1D" secondAttribute="centerY" id="ER0-i2-Y31"/>
+                                    <constraint firstAttribute="centerY" secondItem="jdQ-KF-s1D" secondAttribute="centerY" id="Tk2-fA-c74"/>
+                                    <constraint firstItem="jdQ-KF-s1D" firstAttribute="centerX" secondItem="EYa-Ur-ddF" secondAttribute="centerX" id="Twx-kl-HXL"/>
+                                    <constraint firstAttribute="height" constant="46" id="WWm-7C-xOd"/>
+                                    <constraint firstItem="EYa-Ur-ddF" firstAttribute="top" secondItem="K5T-Cw-2mq" secondAttribute="top" constant="15" id="hIA-d9-hdi"/>
+                                    <constraint firstAttribute="width" constant="260" id="jNw-Sh-rjd"/>
+                                    <constraint firstAttribute="trailing" secondItem="EYa-Ur-ddF" secondAttribute="trailing" constant="21.5" id="qSz-Pv-fVO"/>
+                                    <constraint firstItem="jdQ-KF-s1D" firstAttribute="centerY" secondItem="EYa-Ur-ddF" secondAttribute="centerY" id="qeQ-0l-tjb"/>
+                                    <constraint firstItem="jdQ-KF-s1D" firstAttribute="leading" secondItem="K5T-Cw-2mq" secondAttribute="leading" constant="8" id="rXK-Bc-gi2"/>
+                                    <constraint firstItem="jdQ-KF-s1D" firstAttribute="centerY" secondItem="EYa-Ur-ddF" secondAttribute="centerY" id="wap-Te-Khm"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Twx-kl-HXL"/>
+                                        <exclude reference="qeQ-0l-tjb"/>
+                                        <exclude reference="wap-Te-Khm"/>
+                                        <exclude reference="99s-SG-c0s"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="K5T-Cw-2mq" secondAttribute="centerY" id="PXp-f1-IWl"/>
+                            <constraint firstAttribute="centerX" secondItem="K5T-Cw-2mq" secondAttribute="centerX" id="S0c-PI-D84"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pes-e3-hX4"/>
+                    <connections>
+                        <outlet property="transparentNavBar" destination="jdQ-KF-s1D" id="UJV-YL-q6s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

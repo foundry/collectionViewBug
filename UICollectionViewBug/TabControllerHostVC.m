@@ -46,6 +46,10 @@
 
     self.tabController = [[TabController alloc] init];
     NSLog(@"%@",self.tabController.view);
+    
+    //comparing use of autolayout and frames
+    //makes no difference to the issue
+    
     if (self.useAutoLayout) {
         
         [self addChildViewController:self.tabController];
