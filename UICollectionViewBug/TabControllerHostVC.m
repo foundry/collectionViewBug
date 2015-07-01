@@ -51,13 +51,14 @@
         [self addChildViewController:self.tabController];
         [self.view addSubview:self.tabController.view];
         [self.tabController didMoveToParentViewController:self];
-        [self setupTabBarWithAutolayout];
+        [self setupConstraints];
 
     } else {
         CGFloat width = self.view.bounds.size.width;
         CGFloat barHeight =  self.navigationController.navigationBar.bounds.size.height;
         CGFloat originY = self.translucentBar? barHeight+20:0;
-        [self setupTabBarWithFrame:CGRectMake(0, originY, width, barHeight)];
+        CGRect frame = CGRectMake(0, originY, width, barHeight);
+        self.tabController.collectionView.frame = frame;
         [self addChildViewController:self.tabController];
         [self.view addSubview:self.tabController.collectionView];
         [self.tabController didMoveToParentViewController:self];
@@ -67,10 +68,8 @@
     
 }
 
-- (void)setupTabBarWithFrame:(CGRect)frame {
-    self.tabController.collectionView.frame = frame;
-}
-- (void)setupTabBarWithAutolayout {
+
+- (void)setupConstraints {
     CGFloat barHeight =  self.navigationController.navigationBar.bounds.size.height;
     CGFloat originY = self.translucentBar? barHeight:-20;
     self.tabController.collectionView.translatesAutoresizingMaskIntoConstraints = NO;
