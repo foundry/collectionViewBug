@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8kH-Jf-J8N">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
@@ -52,16 +53,94 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wze-ZK-aw7">
+                                <rect key="frame" x="170" y="339" width="260" height="46"/>
+                                <subviews>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Ah-Ya-03Y">
+                                        <rect key="frame" x="8" y="8" width="51" height="31"/>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="        CollectionViewController" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTs-Tp-zOb">
+                                        <rect key="frame" x="47" y="15" width="191" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="vTs-Tp-zOb" secondAttribute="trailing" constant="21.5" id="66s-L7-Amt"/>
+                                    <constraint firstAttribute="centerY" secondItem="vTs-Tp-zOb" secondAttribute="centerY" id="8tS-h8-qwU"/>
+                                    <constraint firstItem="4Ah-Ya-03Y" firstAttribute="centerY" secondItem="vTs-Tp-zOb" secondAttribute="centerY" id="EAL-6I-uK5"/>
+                                    <constraint firstItem="4Ah-Ya-03Y" firstAttribute="centerX" secondItem="vTs-Tp-zOb" secondAttribute="centerX" id="HJC-m4-fP6"/>
+                                    <constraint firstAttribute="height" constant="46" id="J4I-iM-tTD"/>
+                                    <constraint firstAttribute="centerY" secondItem="4Ah-Ya-03Y" secondAttribute="centerY" id="OPC-zG-dha"/>
+                                    <constraint firstItem="4Ah-Ya-03Y" firstAttribute="centerY" secondItem="vTs-Tp-zOb" secondAttribute="centerY" id="Qpj-xc-JD2"/>
+                                    <constraint firstAttribute="centerY" secondItem="4Ah-Ya-03Y" secondAttribute="centerY" id="XTr-MY-Du9"/>
+                                    <constraint firstItem="vTs-Tp-zOb" firstAttribute="top" secondItem="Wze-ZK-aw7" secondAttribute="top" constant="15" id="miO-v1-j0o"/>
+                                    <constraint firstItem="4Ah-Ya-03Y" firstAttribute="leading" secondItem="Wze-ZK-aw7" secondAttribute="leading" constant="8" id="nhC-wc-V3x"/>
+                                    <constraint firstAttribute="width" constant="260" id="tGv-fB-uwe"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="HJC-m4-fP6"/>
+                                        <exclude reference="EAL-6I-uK5"/>
+                                        <exclude reference="Qpj-xc-JD2"/>
+                                        <exclude reference="8tS-h8-qwU"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YqD-tb-Bbd">
+                                <rect key="frame" x="170" y="401" width="260" height="46"/>
+                                <subviews>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qhG-cC-NAT">
+                                        <rect key="frame" x="8" y="8" width="51" height="31"/>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="        automaticallyAdjustsScrollViewInsets" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Osl-ZQ-8qY">
+                                        <rect key="frame" x="-34" y="15" width="272" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="qhG-cC-NAT" firstAttribute="leading" secondItem="YqD-tb-Bbd" secondAttribute="leading" constant="8" id="2Ux-Td-rHd"/>
+                                    <constraint firstAttribute="centerY" secondItem="qhG-cC-NAT" secondAttribute="centerY" id="7wI-Xx-uTa"/>
+                                    <constraint firstAttribute="trailing" secondItem="Osl-ZQ-8qY" secondAttribute="trailing" constant="21.5" id="J3D-V0-gkQ"/>
+                                    <constraint firstAttribute="centerY" secondItem="qhG-cC-NAT" secondAttribute="centerY" id="OT8-Cd-xbI"/>
+                                    <constraint firstItem="qhG-cC-NAT" firstAttribute="centerX" secondItem="Osl-ZQ-8qY" secondAttribute="centerX" id="RUv-V0-oSc"/>
+                                    <constraint firstItem="qhG-cC-NAT" firstAttribute="centerY" secondItem="Osl-ZQ-8qY" secondAttribute="centerY" id="VBg-bZ-PLq"/>
+                                    <constraint firstItem="Osl-ZQ-8qY" firstAttribute="top" secondItem="YqD-tb-Bbd" secondAttribute="top" constant="15" id="crr-BC-kly"/>
+                                    <constraint firstAttribute="width" constant="260" id="deO-u8-FO7"/>
+                                    <constraint firstItem="qhG-cC-NAT" firstAttribute="centerY" secondItem="Osl-ZQ-8qY" secondAttribute="centerY" id="sCM-8Z-sd9"/>
+                                    <constraint firstAttribute="centerY" secondItem="Osl-ZQ-8qY" secondAttribute="centerY" id="tcb-d4-IqD"/>
+                                    <constraint firstAttribute="height" constant="46" id="wH3-Is-zEf"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="RUv-V0-oSc"/>
+                                        <exclude reference="sCM-8Z-sd9"/>
+                                        <exclude reference="VBg-bZ-PLq"/>
+                                        <exclude reference="tcb-d4-IqD"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="YqD-tb-Bbd" secondAttribute="centerX" id="6Qb-ji-Muo"/>
                             <constraint firstAttribute="centerY" secondItem="K5T-Cw-2mq" secondAttribute="centerY" id="PXp-f1-IWl"/>
+                            <constraint firstItem="Wze-ZK-aw7" firstAttribute="top" secondItem="K5T-Cw-2mq" secondAttribute="bottom" constant="16" id="RAQ-Jv-4wU"/>
                             <constraint firstAttribute="centerX" secondItem="K5T-Cw-2mq" secondAttribute="centerX" id="S0c-PI-D84"/>
+                            <constraint firstItem="YqD-tb-Bbd" firstAttribute="top" secondItem="Wze-ZK-aw7" secondAttribute="bottom" constant="16" id="mG0-44-fP6"/>
+                            <constraint firstAttribute="centerX" secondItem="Wze-ZK-aw7" secondAttribute="centerX" id="rdM-Dr-ug3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pes-e3-hX4"/>
                     <connections>
+                        <outlet property="autoAdjustScrollViewInsets" destination="qhG-cC-NAT" id="W9y-ek-Nl7"/>
                         <outlet property="transparentNavBar" destination="jdQ-KF-s1D" id="UJV-YL-q6s"/>
+                        <outlet property="useCollectionViewController" destination="4Ah-Ya-03Y" id="NDI-Qf-aB7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

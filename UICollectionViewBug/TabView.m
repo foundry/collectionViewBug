@@ -1,73 +1,51 @@
 //
-//  WNFilterPickerCVC.m
-//  Wondr
+//  TabView.m
+//  UICollectionViewBug
 //
-//  Created by jonathan on 04/07/2014.
-//  Copyright (c) 2014 Wondr.it Ltd. All rights reserved.
+//  Created by jonathan on 01/07/2015.
+//  Copyright (c) 2015 ellipsis. All rights reserved.
 //
 
-#import "TabController.h"
+#import "TabView.h"
+@interface TabView()< UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>\
 
-
-@interface TabController ()< UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
-
+@property (nonatomic, strong) UICollectionView* collectionView;
+@property (nonatomic, strong) UICollectionViewLayout* collectionViewLayout;
 @end
 
-@implementation TabController
-- (instancetype) init {
-    NSLog(@"%s",__FUNCTION__);
+@implementation TabView
 
+- (instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self ) {
+        [self initialise];
+    }
+    return self;
+}
+
+- (void)initialise {
     UICollectionViewFlowLayout* layout = [[UICollectionViewFlowLayout alloc] init];
-    self = [self initWithCollectionViewLayout:layout];
-    if (self) {
-        [self.collectionView registerClass:UICollectionViewCell.class forCellWithReuseIdentifier:@"Cell"];
-    }
-    return self;
 
-}
-- (instancetype) initWithCollectionViewLayout:(UICollectionViewLayout*)layout {
-    NSLog(@"%s",__FUNCTION__);
-    
-    self = [super initWithCollectionViewLayout:layout];
-    if (self) {
-        [self.collectionView registerClass:UICollectionViewCell.class forCellWithReuseIdentifier:@"Cell"];
-    }
-    return self;
-}
-
-
-- (void)viewDidload {
-    NSLog(@"%s",__FUNCTION__);
-
-
-    [super viewDidLoad];
+    self.collectionView = [[UICollectionView alloc] initWithFrame:self.bounds collectionViewLayout:layout];
+    self.collectionView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     [self setupCollectionView];
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    NSLog(@"%s",__FUNCTION__);
-
-    [super viewWillAppear:animated];
+    [self addSubview:self.collectionView];
     [self.collectionView reloadData];
 
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    NSLog(@"%s",__FUNCTION__);
-
-    [super viewDidAppear:animated];
-        NSLog(@"edgeInsets: %@",NSStringFromUIEdgeInsets(self.collectionView.contentInset));
-
-}
-
-
 - (void)setupCollectionView {
     NSLog(@"%s",__FUNCTION__);
+    [self.collectionView registerClass:UICollectionViewCell.class forCellWithReuseIdentifier:@"Cell"];
     self.collectionView.delaysContentTouches = NO;
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
+    NSLog(@"edgeInsets: %@",NSStringFromUIEdgeInsets(self.collectionView.contentInset));
+          
+}
 
+- (UICollectionViewLayout*)collectionViewLayout {
+    return self.collectionView.collectionViewLayout;
 }
 
 
@@ -76,23 +54,23 @@
 
 - (NSInteger)collectionView:(UICollectionView *)view numberOfItemsInSection:(NSInteger)section {
     NSLog(@"%s",__FUNCTION__);
-
+    
     return 10;
-
+    
 }
 
 - (NSInteger)numberOfSectionsInCollectionView: (UICollectionView *)collectionView {
     NSLog(@"%s",__FUNCTION__);
-
+    
     return 1;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)cv
                   cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"%s",__FUNCTION__);
-
+    
     UICollectionViewCell* cell =[cv dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
-
+    
     cell.backgroundColor = [UIColor colorWithWhite:(indexPath.row+1)/((float)[self.collectionView numberOfItemsInSection:0]) alpha:1];
     return cell;
 }
@@ -106,7 +84,6 @@
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
     return 0;
 }
-
 
 
 @end
