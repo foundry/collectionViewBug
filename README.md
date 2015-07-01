@@ -1,7 +1,8 @@
 # collectionViewBug
 Demo of collectionView bug when UINavigationBar is translucent
 
-    [[[[[[[[[[[[  FIXED  ]]]]]]]]]]]   
+______________    
+FIXED  
 
  - in the parent viewController     
      
