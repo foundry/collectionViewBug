@@ -5,8 +5,8 @@ Demo of collectionView bug when UINavigationBar is translucent
 I am designing a UICollectionViewController to use as a tab bar control. I've found some strange behaviour when embedding in a UINavigationController.
 
 <table><tr><td>
-This is what we want<br>each grey step is a UICollectionViewCell:
-</td><td>If navigationBar.translucent =  YES<br>is what we get:</td></tr>
+This is what we want:<br>each grey step is a UICollectionViewCell:
+</td><td>This is what we get: <br>when navigationBar.translucent =  YES</td></tr>
 <tr><td><img src = "https://github.com/foundry/collectionViewBug/blob/master/screendumps/good.png">
 </td><td>
  <img src = "https://github.com/foundry/collectionViewBug/blob/master/screendumps/bad.png">
