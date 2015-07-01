@@ -8,11 +8,11 @@
 
 #import "TabControllerHostVC.h"
 #import "TabController.h"
-#import "AppDelegate.h"
+#import "TabView.h"
+
 @interface TabControllerHostVC ()
 @property (nonatomic, strong) TabController* tabController;
-@property (nonatomic, assign) BOOL useAutoLayout;
-@property (nonatomic, assign) BOOL translucentBar;
+@property (nonatomic, strong) TabView* tabView;
 
 @end
 
@@ -20,18 +20,18 @@
 
 - (void)viewDidLoad {
     self.title = NSStringFromClass(self.class);
-    AppDelegate* appDelegate = [[UIApplication sharedApplication] delegate];
-    self.useAutoLayout = appDelegate.useAutoLayout;
-    self.translucentBar = appDelegate.translucentBar;
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor redColor];
     self.navigationController.navigationBar.translucent = self.translucentBar;
-
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self setupTabBar];
+    if (self.useCollectionViewController) {
+       [self setupTabBar];
+    } else {
+    [self setupTabView];
+    }
 
 }
 
@@ -40,6 +40,15 @@
 
 }
 
+- (void)setupTabView {
+    NSLog(@"%s",__FUNCTION__);
+    self.tabView = [[TabView alloc] init];
+    self.tabView.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addSubview:self.tabView];
+    CGFloat originY = self.translucentBar? self.navigationController.navigationBar.bounds.size.height+20:0;
+    [self setupConstraintsWithOriginY:originY];
+    
+}
 
 - (void)setupTabBar {
     NSLog(@"%s",__FUNCTION__);
@@ -55,7 +64,8 @@
         [self addChildViewController:self.tabController];
         [self.view addSubview:self.tabController.view];
         [self.tabController didMoveToParentViewController:self];
-        [self setupConstraints];
+        CGFloat originY = self.translucentBar? self.navigationController.navigationBar.bounds.size.height+60: -20;
+        [self setupConstraintsWithOriginY:originY];
 
     } else {
         CGFloat width = self.view.bounds.size.width;
@@ -73,15 +83,23 @@
 }
 
 
-- (void)setupConstraints {
-    CGFloat barHeight =  self.navigationController.navigationBar.bounds.size.height;
-    CGFloat originY = self.translucentBar? barHeight:-20;
+- (void)setupConstraintsWithOriginY:(CGFloat)originY {
+    NSLog(@"toplayoutguide %f",self.topLayoutGuide.length);
+
+    CGFloat barHeight =  self.navigationController.navigationBar.bounds.size.height*3;
+  
+    
     self.tabController.collectionView.translatesAutoresizingMaskIntoConstraints = NO;
     NSString* formatV = @"V:|-(originY)-[view(barHeight)]";
     NSString* formatH = @"H:|[view]|";
     NSDictionary* metrics =@{@"originY":@(originY)
                              ,@"barHeight":@(barHeight)};
-    NSDictionary* views = @{@"view":self.tabController.collectionView};
+    NSDictionary* views = @{};
+    if (self.tabController) {
+        views = @{@"view":self.tabController.collectionView};
+    } else if (self.tabView) {
+        views = @{@"view":self.tabView};
+    }
     for (NSString* format in @[formatV, formatH]) {
         [self.view addConstraints:
          [NSLayoutConstraint constraintsWithVisualFormat:format

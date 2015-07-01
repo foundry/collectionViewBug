@@ -10,8 +10,7 @@
 #define FRAMES 0
 #define TRANSLUCENT_BAR 0
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
-@property (nonatomic, assign) BOOL useAutoLayout;
-@property (nonatomic, assign) BOOL translucentBar;
+
 @property (strong, nonatomic) UIWindow *window;
 
 

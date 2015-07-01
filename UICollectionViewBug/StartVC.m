@@ -13,6 +13,9 @@
 @interface StartVC ()
 @property (nonatomic, strong) IBOutlet UISwitch* useAutoLayout;
 @property (nonatomic, strong) IBOutlet UISwitch* transparentNavBar;
+@property (weak, nonatomic) IBOutlet UISwitch *useCollectionViewController;
+@property (weak, nonatomic) IBOutlet UISwitch *autoAdjustScrollViewInsets;
+
 @property (nonatomic, strong) UILabel* switch1Label;
 @property (nonatomic, strong) UILabel* switch2Label;
 @end
@@ -34,11 +37,13 @@
 
 
 - (void)pushVC {
-    AppDelegate* appDelegate  = [[UIApplication sharedApplication] delegate];
-    appDelegate.useAutoLayout = self.useAutoLayout.on;
-    appDelegate.translucentBar = self.transparentNavBar.on;
+
     self.navigationController.navigationBar.translucent = self.transparentNavBar.on;
-    UIViewController* host = [[TabControllerHostVC alloc] init];
+    TabControllerHostVC* host = [[TabControllerHostVC alloc] init];
+    host.useAutoLayout = YES;
+    host.translucentBar = self.transparentNavBar.on;
+    host.useCollectionViewController = self.useCollectionViewController.on;
+    host.automaticallyAdjustsScrollViewInsets = self.autoAdjustScrollViewInsets.on;
     [self.navigationController pushViewController:host animated:YES];
 
 }

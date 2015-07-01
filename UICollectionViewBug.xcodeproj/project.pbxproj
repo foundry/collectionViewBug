@@ -17,6 +17,7 @@
 		ABD4C8491B4343700036F688 /* TabController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABD4C8481B4343700036F688 /* TabController.m */; };
 		ABD4C84C1B43437D0036F688 /* TabControllerHostVC.m in Sources */ = {isa = PBXBuildFile; fileRef = ABD4C84B1B43437D0036F688 /* TabControllerHostVC.m */; };
 		ABD4C8521B435DBB0036F688 /* StartVC.m in Sources */ = {isa = PBXBuildFile; fileRef = ABD4C8511B435DBB0036F688 /* StartVC.m */; };
+		ABD4C8561B4403600036F688 /* TabView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABD4C8551B4403600036F688 /* TabView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,8 @@
 		ABD4C84B1B43437D0036F688 /* TabControllerHostVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabControllerHostVC.m; sourceTree = "<group>"; };
 		ABD4C8501B435DBB0036F688 /* StartVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartVC.h; sourceTree = "<group>"; };
 		ABD4C8511B435DBB0036F688 /* StartVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartVC.m; sourceTree = "<group>"; };
+		ABD4C8541B4403600036F688 /* TabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabView.h; sourceTree = "<group>"; };
+		ABD4C8551B4403600036F688 /* TabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +96,8 @@
 				ABD4C8531B4374F60036F688 /* Not used */,
 				ABD4C84A1B43437D0036F688 /* TabControllerHostVC.h */,
 				ABD4C84B1B43437D0036F688 /* TabControllerHostVC.m */,
+				ABD4C8541B4403600036F688 /* TabView.h */,
+				ABD4C8551B4403600036F688 /* TabView.m */,
 				ABD4C8471B4343700036F688 /* TabController.h */,
 				ABD4C8481B4343700036F688 /* TabController.m */,
 				ABD4C8221B4343090036F688 /* AppDelegate.h */,
@@ -242,6 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABD4C8561B4403600036F688 /* TabView.m in Sources */,
 				ABD4C84C1B43437D0036F688 /* TabControllerHostVC.m in Sources */,
 				ABD4C8491B4343700036F688 /* TabController.m in Sources */,
 				ABD4C8271B4343090036F688 /* ViewController.m in Sources */,

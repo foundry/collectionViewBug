@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface TabControllerHostVC : UIViewController
-
+@property (nonatomic, assign) BOOL useAutoLayout;
+@property (nonatomic, assign) BOOL translucentBar;
+@property (nonatomic, assign) BOOL useCollectionViewController;
+//@property (nonatomic, assign) BOOL autoAdjustScrollViewInsets;
 @end
