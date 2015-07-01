@@ -2,6 +2,7 @@
 Demo of collectionView bug when UINavigationBar is translucent
 
 
+
 I am designing a UICollectionViewController to use as a tab bar control, but getting stuck with some strange behaviour when embedding in a UINavigationController.
 
 <table><tr><td>
@@ -38,7 +39,10 @@ In the demo you can switch between translucent/opaque and use of frames/autolayo
 
 I added an autolayout switch because at first I suspected this had something to do with it (the usual suspect). But actually it makes no difference.
 
+Tested in iOS7.1 and iOS8.3
+
 Any suggestions gratefully received.
+
 
 
 
