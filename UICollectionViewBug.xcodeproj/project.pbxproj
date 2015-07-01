@@ -14,9 +14,9 @@
 		ABD4C82C1B4343090036F688 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABD4C82B1B4343090036F688 /* Images.xcassets */; };
 		ABD4C82F1B4343090036F688 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABD4C82D1B4343090036F688 /* LaunchScreen.xib */; };
 		ABD4C83B1B4343090036F688 /* UICollectionViewBugTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ABD4C83A1B4343090036F688 /* UICollectionViewBugTests.m */; };
-		ABD4C8491B4343700036F688 /* WNTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABD4C8481B4343700036F688 /* WNTabController.m */; };
-		ABD4C84C1B43437D0036F688 /* WNTabControllerHostVC.m in Sources */ = {isa = PBXBuildFile; fileRef = ABD4C84B1B43437D0036F688 /* WNTabControllerHostVC.m */; };
-		ABD4C8521B435DBB0036F688 /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = ABD4C8511B435DBB0036F688 /* ViewController2.m */; };
+		ABD4C8491B4343700036F688 /* TabController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABD4C8481B4343700036F688 /* TabController.m */; };
+		ABD4C84C1B43437D0036F688 /* TabControllerHostVC.m in Sources */ = {isa = PBXBuildFile; fileRef = ABD4C84B1B43437D0036F688 /* TabControllerHostVC.m */; };
+		ABD4C8521B435DBB0036F688 /* StartVC.m in Sources */ = {isa = PBXBuildFile; fileRef = ABD4C8511B435DBB0036F688 /* StartVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,12 +43,12 @@
 		ABD4C8341B4343090036F688 /* UICollectionViewBugTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UICollectionViewBugTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABD4C8391B4343090036F688 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABD4C83A1B4343090036F688 /* UICollectionViewBugTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICollectionViewBugTests.m; sourceTree = "<group>"; };
-		ABD4C8471B4343700036F688 /* WNTabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNTabController.h; sourceTree = "<group>"; };
-		ABD4C8481B4343700036F688 /* WNTabController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNTabController.m; sourceTree = "<group>"; };
-		ABD4C84A1B43437D0036F688 /* WNTabControllerHostVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNTabControllerHostVC.h; sourceTree = "<group>"; };
-		ABD4C84B1B43437D0036F688 /* WNTabControllerHostVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNTabControllerHostVC.m; sourceTree = "<group>"; };
-		ABD4C8501B435DBB0036F688 /* ViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
-		ABD4C8511B435DBB0036F688 /* ViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
+		ABD4C8471B4343700036F688 /* TabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabController.h; sourceTree = "<group>"; };
+		ABD4C8481B4343700036F688 /* TabController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabController.m; sourceTree = "<group>"; };
+		ABD4C84A1B43437D0036F688 /* TabControllerHostVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabControllerHostVC.h; sourceTree = "<group>"; };
+		ABD4C84B1B43437D0036F688 /* TabControllerHostVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabControllerHostVC.m; sourceTree = "<group>"; };
+		ABD4C8501B435DBB0036F688 /* StartVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartVC.h; sourceTree = "<group>"; };
+		ABD4C8511B435DBB0036F688 /* StartVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,16 +90,15 @@
 		ABD4C81D1B4343090036F688 /* UICollectionViewBug */ = {
 			isa = PBXGroup;
 			children = (
-				ABD4C84A1B43437D0036F688 /* WNTabControllerHostVC.h */,
-				ABD4C84B1B43437D0036F688 /* WNTabControllerHostVC.m */,
-				ABD4C8471B4343700036F688 /* WNTabController.h */,
-				ABD4C8481B4343700036F688 /* WNTabController.m */,
+				ABD4C8531B4374F60036F688 /* Not used */,
+				ABD4C84A1B43437D0036F688 /* TabControllerHostVC.h */,
+				ABD4C84B1B43437D0036F688 /* TabControllerHostVC.m */,
+				ABD4C8471B4343700036F688 /* TabController.h */,
+				ABD4C8481B4343700036F688 /* TabController.m */,
 				ABD4C8221B4343090036F688 /* AppDelegate.h */,
 				ABD4C8231B4343090036F688 /* AppDelegate.m */,
-				ABD4C8251B4343090036F688 /* ViewController.h */,
-				ABD4C8261B4343090036F688 /* ViewController.m */,
-				ABD4C8501B435DBB0036F688 /* ViewController2.h */,
-				ABD4C8511B435DBB0036F688 /* ViewController2.m */,
+				ABD4C8501B435DBB0036F688 /* StartVC.h */,
+				ABD4C8511B435DBB0036F688 /* StartVC.m */,
 				ABD4C8281B4343090036F688 /* Main.storyboard */,
 				ABD4C82B1B4343090036F688 /* Images.xcassets */,
 				ABD4C82D1B4343090036F688 /* LaunchScreen.xib */,
@@ -132,6 +131,15 @@
 				ABD4C8391B4343090036F688 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ABD4C8531B4374F60036F688 /* Not used */ = {
+			isa = PBXGroup;
+			children = (
+				ABD4C8251B4343090036F688 /* ViewController.h */,
+				ABD4C8261B4343090036F688 /* ViewController.m */,
+			);
+			name = "Not used";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,12 +242,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABD4C84C1B43437D0036F688 /* WNTabControllerHostVC.m in Sources */,
-				ABD4C8491B4343700036F688 /* WNTabController.m in Sources */,
+				ABD4C84C1B43437D0036F688 /* TabControllerHostVC.m in Sources */,
+				ABD4C8491B4343700036F688 /* TabController.m in Sources */,
 				ABD4C8271B4343090036F688 /* ViewController.m in Sources */,
 				ABD4C8241B4343090036F688 /* AppDelegate.m in Sources */,
 				ABD4C8211B4343090036F688 /* main.m in Sources */,
-				ABD4C8521B435DBB0036F688 /* ViewController2.m in Sources */,
+				ABD4C8521B435DBB0036F688 /* StartVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

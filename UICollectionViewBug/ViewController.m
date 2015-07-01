@@ -7,8 +7,8 @@
 //
 
 #import "ViewController.h"
-#import "WNTabControllerHostVC.h"
-#import "ViewController2.h"
+#import "TabControllerHostVC.h"
+#import "StartVC.h"
 #import "AppDelegate.h"
 @interface ViewController ()
 
@@ -20,18 +20,19 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 }
-- (IBAction)showCollectionView:(id)sender {
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     [self pushVC];
     
 }
 
 - (void)presentVC {
-    UIViewController* host = [[ViewController2 alloc] init];
+    UIViewController* host = [[StartVC alloc] init];
     [self presentViewController:host animated:YES completion:NULL];
 }
 
 - (void)pushVC {
-    UIViewController* host = [[ViewController2 alloc] init];
+    UIViewController* host = [[StartVC alloc] init];
     UINavigationController* navCon = [[UINavigationController alloc] initWithRootViewController:host];
     navCon.navigationBar.translucent = TRANSLUCENT_BAR;
     [self presentViewController:navCon animated:YES completion:NULL];
