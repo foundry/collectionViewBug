@@ -4,10 +4,14 @@ Demo of collectionView bug when UINavigationBar is translucent
 
 I am designing a UICollectionViewController to use as a tab bar control. I've found some strange behaviour when embedding in a UINavigationController.
 
-<pre>This is what we want:
+<table><tr><td>
+This is what we want:
+</td><td>This is what we get:</td></tr>
+<tr><td><img src = "https://github.com/foundry/collectionViewBug/blob/master/screendumps/good.png">
+</td><td>
+ <img src = "https://github.com/foundry/collectionViewBug/blob/master/screendumps/bad.png">
+ </td></tr></table>
 
-<img src = "https://github.com/foundry/collectionViewBug/blob/master/screendumps/good.png"> <img src = "https://github.com/foundry/collectionViewBug/blob/master/screendumps/bad.png">
-</pre>
 Each grey step represents a tab cell...
 
 If the Navigation Bar translucent property is set to YES,  this is what we get:
