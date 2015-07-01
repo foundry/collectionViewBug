@@ -14,7 +14,17 @@
 @end
 
 @implementation WNTabController
+- (instancetype) init {
+    NSLog(@"%s",__FUNCTION__);
 
+    UICollectionViewFlowLayout* layout = [[UICollectionViewFlowLayout alloc] init];
+    self = [self initWithCollectionViewLayout:layout];
+    if (self) {
+        [self.collectionView registerClass:UICollectionViewCell.class forCellWithReuseIdentifier:@"Cell"];
+    }
+    return self;
+
+}
 - (instancetype) initWithCollectionViewLayout:(UICollectionViewLayout*)layout {
     NSLog(@"%s",__FUNCTION__);
     
@@ -84,6 +94,16 @@
 
     cell.backgroundColor = [UIColor colorWithWhite:(indexPath.row+1)/((float)[self.collectionView numberOfItemsInSection:0]) alpha:1];
     return cell;
+}
+
+#pragma mark - flowlayout delegate
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return CGSizeMake(collectionView.bounds.size.width/(float)[self.collectionView numberOfItemsInSection:0], collectionView.bounds.size.height);
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
+    return 0;
 }
 
 
