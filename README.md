@@ -6,7 +6,7 @@ I am designing a UICollectionViewController to use as a tab bar control. I've fo
 
 <table><tr><td>
 This is what we want<br>each grey step is a UICollectionViewCell:
-</td><td>If the UINavigationBar.translucent property is YES, is what we get:</td></tr>
+</td><td>If navigationBar.translucent =  YES<br>is what we get:</td></tr>
 <tr><td><img src = "https://github.com/foundry/collectionViewBug/blob/master/screendumps/good.png">
 </td><td>
  <img src = "https://github.com/foundry/collectionViewBug/blob/master/screendumps/bad.png">
