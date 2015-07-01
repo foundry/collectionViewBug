@@ -12,6 +12,9 @@ This is what we want:<br>each grey step is a UICollectionViewCell:
  <img src = "https://github.com/foundry/collectionViewBug/blob/master/screendumps/bad.png">
  </td></tr></table>
 
+What happens is that 'cellForRowAtIndexPath' does not get called. The earlier datasource methods
+
+     - (NSInteger)collectionView:(UICollectionView *)view numberOfItemsInSection:(NSInteger)section {
 
 
 
