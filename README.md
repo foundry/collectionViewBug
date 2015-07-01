@@ -1,6 +1,14 @@
 # collectionViewBug
 Demo of collectionView bug when UINavigationBar is translucent
 
+[FIXED - in the parent viewController     
+     
+       self.automaticallyAdjustsScrollViewInsets = NO;
+       
+       
+      >Default value is YES, which allows the view controller to adjust its scroll view insets in response to the screen areas consumed by the status bar, navigation bar, and toolbar or tab bar. Set to NO if you want to manage scroll view inset adjustments yourself, such as when there is more than one scroll view in the view hierarchy.
+      
+ I didn't recognise the issue, as the collectionView height was the same as the top contentInset. Thats why cellForRowAtIndexPath didn’t get called, there was no display area]
 
 
 I am designing a UICollectionViewController to use as a tab bar control, but getting stuck with some strange behaviour when embedding in a UINavigationController.
